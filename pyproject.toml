@@ -1,0 +1,23 @@
+[project]
+name = "Hello_serivce"
+version = "1.0.0"
+description = "Simple hello-world service"
+authors = [
+    {name = "Filip S.", email = "filip.syn@protonmail.com"},
+]
+dependencies = [
+    "fastapi>=0.103.2",
+    "uvicorn>=0.23.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+start = "uvicorn main:app --reload"
+test = "pytest"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=7.4.2",
+]
